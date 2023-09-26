@@ -6,7 +6,6 @@ Full Stack Web Developer
 
 I have been working as a web developer for ExtPower since 2019
 
-* 🌍  I'm based in Agadir, Morocco
 * ✉️  You can contact me at [mehdimamasxd@gmail.com](mailto:mehdimamasxd@gmail.com)
 * 🤝  I'm open to collaborating on web apps, browser extensions...etc
 
