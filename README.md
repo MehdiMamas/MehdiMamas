@@ -1,10 +1,10 @@
 My name is Mehdi,
 ===================================================================================================================================
 
-Full Stack Web Developer
+Software Engineer
 ------------------------
 
-I have been working as a software engineer at ExtPower since 2019
+I have been working as a software engineer since 2019
 
 * ✉️  You can contact me at [mehdimamasxd@gmail.com](mailto:mehdimamasxd@gmail.com)
 * 🤝  I'm open to collaborating on web apps, browser extensions...etc
