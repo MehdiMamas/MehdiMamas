@@ -78,6 +78,10 @@ Software engineering experience spanning:
 
 **Systems & Security:** WebSockets, End-to-End Encryption, Cryptographic Protocols, Local Networking
 
+## Resume
+
+[mehdimamas.github.io/my-resume](https://mehdimamas.github.io/my-resume/)
+
 ## Connect
 
-[LinkedIn](https://linkedin.com/in/mehdidev/) · [GitHub](https://github.com/MehdiMamas) · [Portfolio](https://mehdimamas.dev)
+[LinkedIn](https://linkedin.com/in/mehdidev/) · [GitHub](https://github.com/MehdiMamas) · [Website](https://mehdimamas.dev)
