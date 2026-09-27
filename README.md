@@ -42,6 +42,18 @@ End-to-end encrypted local-network data sharing between devices.
 
 [View Project](https://github.com/MehdiMamas/ShareGo)
 
+### 📬 Gmail OTP Copier
+
+Chrome, Edge, and Brave extension that reads verification codes from one or more Gmail accounts and can auto-fill the page, copy the code, or keep it in the popup. Mail stays in the browser on the Gmail readonly scope.
+
+**TypeScript • React • Chrome Extension • Gmail API • OAuth**
+
+- Several Gmail accounts, each with its own fill, copy, or store mode
+- Background checks that speed up while a code field is on screen
+- Auto-fill for a single box or split digit boxes, plus a Fill chip for recent codes
+
+[View Project](https://github.com/MehdiMamas/multi-gmail-auth-copier)
+
 ### 🧩 FitDownloader
 
 Chrome extension for automated multi-file downloads with configurable concurrency.
