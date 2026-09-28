@@ -72,6 +72,18 @@ Chrome extension for automated multi-file downloads with configurable concurrenc
 
 [View Project](https://github.com/MehdiMamas/FitDownloader)
 
+### 🎮 SuperPSX Patch Checker
+
+Chrome extension that highlights game versions on SuperPSX when a matching patch exists in the PS-Game-Patch catalog.
+
+**JavaScript • Chrome Extension • Manifest V3**
+
+- Scans version tables for CUSA and PPSA title IDs
+- Color-codes 60 FPS patches, other patches, and titles with no match
+- Bundled index of 376 title IDs, regenerable from the latest patch release
+
+[View Project](https://github.com/MehdiMamas/superpsx-patch-checker)
+
 ## Experience
 
 Software engineering experience spanning:
