@@ -55,6 +55,19 @@ Chrome, Edge, and Brave extension that reads verification codes and sign-in link
 
 [View Project](https://github.com/MehdiMamas/multi-gmail-auth-copier) · [Site](https://mehdimamas.dev/gmail-otp-copier/)
 
+### 💸 Minea → Zendrop Cost Finder
+
+Chrome extension that shows Zendrop product cost on a Minea product page, using the Zendrop session already in the browser.
+
+**TypeScript • Chrome Extension • Manifest V3**
+
+- Reads the visible Minea title and searches Zendrop
+- Ranks matches with image, cost, and confidence
+- Opens the Zendrop product page for the match you pick
+- Never asks for or stores an auth token
+
+[View Project](https://github.com/MehdiMamas/minea-zendrop-cost-finder)
+
 ### 🎬 Medal On-Device Clip Uploader
 
 Console script that posts every on-device Medal clip from the library, so a local backlog can be uploaded without opening each clip by hand.
