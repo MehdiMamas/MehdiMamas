@@ -42,17 +42,18 @@ End-to-end encrypted local-network data sharing between devices.
 
 [View Project](https://github.com/MehdiMamas/ShareGo)
 
-### 📬 Gmail OTP Copier
+### 📬 Keytray
 
-Chrome, Edge, and Brave extension that reads verification codes from one or more Gmail accounts and can auto-fill the page, copy the code, or keep it in the popup. Mail stays in the browser on the Gmail readonly scope.
+Chrome, Edge, and Brave extension that reads verification codes and sign-in links from Gmail. A code can be filled or copied. A link opens only when you choose. Mail stays in the browser on the Gmail readonly scope.
 
 **TypeScript • React • Chrome Extension • Gmail API • OAuth**
 
-- Several Gmail accounts, each with its own fill, copy, or store mode
+- One Gmail account is free. More accounts are a one-time purchase
 - Background checks that speed up while a code field is on screen
 - Auto-fill for a single box or split digit boxes, plus a Fill chip for recent codes
+- Open link for a verification or sign-in URL, only after you click
 
-[View Project](https://github.com/MehdiMamas/multi-gmail-auth-copier)
+[View Project](https://github.com/MehdiMamas/multi-gmail-auth-copier) · [Site](https://mehdimamas.dev/gmail-otp-copier/)
 
 ### 🎬 Medal On-Device Clip Uploader
 
