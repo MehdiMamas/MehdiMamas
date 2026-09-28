@@ -98,6 +98,21 @@ Chrome extension that highlights game versions on SuperPSX when a matching patch
 
 [View Project](https://github.com/MehdiMamas/superpsx-patch-checker)
 
+## Open Source Contributions
+
+### 💳 ExtPay — Referral codes
+
+Referral code support for [ExtPay](https://github.com/Glench/ExtPay), the payments library for browser extensions (770+ stars).
+
+**JavaScript • Browser Extensions • Stripe**
+
+- Added `extpay.setReferral(code)` and `extpay.getReferral()` to keep a first-touch referral code in extension storage
+- Sends the code as `ref` on the existing payment, trial, login, and API-key requests, with no extra network calls
+- Wrote a guide for running a referral program on Stripe promotion codes today
+- Specified the server-side attribution, rewards, and abuse checks for extensionpay.com
+
+[Pull Request #364](https://github.com/Glench/ExtPay/pull/364) (open)
+
 ## Experience
 
 Software engineering experience spanning:
