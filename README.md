@@ -80,12 +80,6 @@ Console script that posts every on-device Medal clip from the library, so a loca
 
 [View Project](https://github.com/MehdiMamas/medal-script-to-upload-all-to-unlisted)
 
-### 🧩 FitDownloader
-
-Chrome extension for automated multi-file downloads with configurable concurrency.
-
-[View Project](https://github.com/MehdiMamas/FitDownloader)
-
 ### 🎮 SuperPSX Patch Checker
 
 Chrome extension that highlights game versions on SuperPSX when a matching patch exists in the PS-Game-Patch catalog.
@@ -112,6 +106,19 @@ Referral code support for [ExtPay](https://github.com/Glench/ExtPay), the paymen
 - Specified the server-side attribution, rewards, and abuse checks for extensionpay.com
 
 [Pull Request #364](https://github.com/Glench/ExtPay/pull/364) (open)
+
+### 🧩 FitDownloader — Folder destinations and session management
+
+Contribution to [FitDownloader](https://github.com/axel-devs/FitDownloader), a Chrome extension for automated multi-file downloads with configurable concurrency.
+
+**JavaScript • Chrome Extension • Manifest V3 • File System Access API**
+
+- Per-tab destination folders, written through an offscreen document with the File System Access API
+- Resolves HTMX landing pages to the direct download link
+- Download sessions that survive service worker restarts, with alarms for keep-alive and reconciliation
+- Download manager page and a redesigned popup with progress tracking
+
+[Pull Request #1](https://github.com/axel-devs/FitDownloader/pull/1) (open) · [Branch](https://github.com/MehdiMamas/FitDownloader/tree/feature/fs-destination-htmx-resolve)
 
 ## Experience
 
