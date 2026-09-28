@@ -54,6 +54,18 @@ Chrome, Edge, and Brave extension that reads verification codes from one or more
 
 [View Project](https://github.com/MehdiMamas/multi-gmail-auth-copier)
 
+### 🎬 Medal On-Device Clip Uploader
+
+Console script that posts every on-device Medal clip from the library, so a local backlog can be uploaded without opening each clip by hand.
+
+**JavaScript • DOM Automation • Browser Console**
+
+- Finds clips still marked on device and skips anything already handled in the run
+- Opens the preview, confirms Post, and waits for the upload to finish before closing the dialogs
+- Scrolls the library until it stops yielding new clips, then reports uploaded, failed, and elapsed time
+
+[View Project](https://github.com/MehdiMamas/medal-script-to-upload-all-to-unlisted)
+
 ### 🧩 FitDownloader
 
 Chrome extension for automated multi-file downloads with configurable concurrency.
