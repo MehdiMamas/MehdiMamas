@@ -94,6 +94,18 @@ Chrome extension that highlights game versions on SuperPSX when a matching patch
 
 ## Open Source Contributions
 
+### 🔑 iCloudBridge — Ente Auth verification codes
+
+Match Ente Auth verification codes to existing Apple Passwords logins in [iCloudBridge](https://github.com/keithvassallomt/icloudbridge).
+
+**Python • React • TypeScript**
+
+- Parses a plain-text Ente Auth export and matches each code to an Apple Passwords login by domain, issuer, and username
+- Shows a setup key and QR code for Set Up Verification Code, because Apple's importer does not update a login that already exists
+- Skips trashed, HOTP, and Steam codes, and leaves ambiguous matches and logins that already have a different code unchanged
+
+[Pull Request #31](https://github.com/keithvassallomt/icloudbridge/pull/31) (merged)
+
 ### 💳 ExtPay — Referral codes
 
 Referral code support for [ExtPay](https://github.com/Glench/ExtPay), the payments library for browser extensions (770+ stars).
