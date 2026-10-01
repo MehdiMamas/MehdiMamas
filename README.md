@@ -14,6 +14,21 @@ I build production software across **AI, backend systems, automation, security, 
 
 ## Featured Projects
 
+### 🌉 PassBridge
+
+iCloud Passwords in Chrome on macOS and Windows, with an inline menu, a fill shortcut, and a save bar that hands the write to Apple's sheet.
+
+**JavaScript • Chrome Extension • Manifest V3**
+
+- Inline menu on login fields, with keyboard navigation
+- Ctrl/Cmd+Shift+L fills and cycles matching logins
+- Saving a password hands the write to Apple's own save sheet
+- Loaded unpacked. Apple's helper only accepts its extension id, so there is no Chrome Web Store listing
+
+[View Project](https://github.com/MehdiMamas/open-passwords) · [Release](https://github.com/MehdiMamas/open-passwords/releases/tag/v1.0.1)
+
+Fork of [ManiForoughi2/open-passwords](https://github.com/ManiForoughi2/open-passwords) (Apache-2.0). Apple protocol from [au2001/icloud-passwords-firefox](https://github.com/au2001/icloud-passwords-firefox) (Apache-2.0). Field lists from [bitwarden/clients](https://github.com/bitwarden/clients) (GPL-3.0). Not affiliated with Apple or Bitwarden.
+
 ### 🧠 AI Voice Medication Agent
 
 Real-time voice automation system for medication-adherence calls.
