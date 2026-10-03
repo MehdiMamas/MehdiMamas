@@ -4,6 +4,8 @@
 
 I build production software across **AI, backend systems, automation, security, and cross-platform applications**.
 
+I am also strong at coding with AI. I use LLMs daily to plan, prompt, review, and ship, and I check the result before it lands.
+
 ## What I Build
 
 - 🤖 **AI Systems** — LLM integrations, conversational AI, voice agents, workflow automation
@@ -23,6 +25,7 @@ iCloud Passwords in Chrome on macOS and Windows, with an inline menu, a fill sho
 - Inline menu on login fields, with keyboard navigation
 - Ctrl/Cmd+Shift+L fills and cycles matching logins
 - Saving a password hands the write to Apple's own save sheet
+- Looks up a password on the page host and on related websites stored with that login
 - Loaded unpacked. Apple's helper only accepts its extension id, so there is no Chrome Web Store listing
 
 [View Project](https://github.com/MehdiMamas/open-passwords) · [Release](https://github.com/MehdiMamas/open-passwords/releases/tag/v1.0.1)
@@ -45,17 +48,15 @@ Real-time voice automation system for medication-adherence calls.
 
 ### 🔐 ShareGo
 
-End-to-end encrypted local-network data sharing between devices.
+End-to-end encrypted sharing between two devices on the same Wi-Fi. One Flutter app for desktop and mobile.
 
-**TypeScript • Electron • React Native • WebSockets • libsodium**
+**Flutter • Dart • WebSockets • libsodium**
 
-- X25519 key exchange
-- XChaCha20-Poly1305 encryption
-- Ephemeral session keys
-- Replay protection
-- Windows, macOS, Linux, iOS, and Android
+- Each session uses a new X25519 key. The message key is derived with HKDF-SHA256 and the text is encrypted with XChaCha20-Poly1305
+- Keys and messages are wiped when the session ends. Nothing is written to disk
+- Windows, macOS, Linux, Android, and iOS
 
-[View Project](https://github.com/MehdiMamas/ShareGo)
+[View Project](https://github.com/MehdiMamas/ShareGo) · [Release v2.0.0](https://github.com/MehdiMamas/ShareGo/releases/tag/v2.0.0)
 
 ### 📬 Keytray
 
@@ -109,6 +110,17 @@ Chrome extension that highlights game versions on SuperPSX when a matching patch
 
 ## Open Source Contributions
 
+### 🐙 GitHub MCP Server — Watch workflow runs
+
+Added `watch_workflow_run` to `actions_get` on [GitHub's official MCP server](https://github.com/github/github-mcp-server), so an agent waits for a workflow run in one call instead of polling.
+
+**Go • MCP • GitHub Actions**
+
+- The server polls every 10 seconds, sends progress notifications, and stops as soon as the client cancels
+- A timeout returns the live status with `completed: false`. A failed run lists the failed jobs and points to `get_job_logs`
+
+[Pull Request #3406](https://github.com/github/github-mcp-server/pull/3406) (open)
+
 ### 🔑 iCloudBridge — Ente Auth verification codes
 
 Match Ente Auth verification codes to existing Apple Passwords logins in [iCloudBridge](https://github.com/keithvassallomt/icloudbridge).
@@ -147,6 +159,17 @@ Contribution to [FitDownloader](https://github.com/axel-devs/FitDownloader), a C
 
 [Pull Request #1](https://github.com/axel-devs/FitDownloader/pull/1) (open) · [Branch](https://github.com/MehdiMamas/FitDownloader/tree/feature/fs-destination-htmx-resolve)
 
+### 🔊 SoundSwitcher — Device and volume locks
+
+Combined input and output devices in one menu for [SoundSwitcher](https://github.com/creepyLANguy/SoundSwitcher), and added locks so Windows does not change the device or the volume.
+
+**C# • C++ • Windows**
+
+- Lock the Default and Communications roles separately, and lock a device's volume to a chosen level
+- The playback helper can set the Default role, the Communications role, or both
+
+[Pull Request #102](https://github.com/creepyLANguy/SoundSwitcher/pull/102) (open)
+
 ## Experience
 
 Software engineering experience spanning:
@@ -156,6 +179,8 @@ Software engineering experience spanning:
 ## Tech
 
 **AI:** LLM APIs, Conversational AI, Voice AI, AI Automation, MCP
+
+**AI-assisted coding:** plans, prompts, reviews, and ships with LLMs daily
 
 **Backend:** Node.js, Python, REST APIs, OAuth2, JWT, Webhooks, Microservices
 
