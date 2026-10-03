@@ -8,9 +8,9 @@ I am also strong at coding with AI. I use LLMs daily to plan, prompt, review, an
 
 ## Highlights
 
-Contributions to official SDKs and libraries other people already ship with.
+Pull requests on official SDKs and libraries other people already ship with. Projects I built are listed under Featured Projects.
 
-### 🐹 Go MCP SDK
+### 🐹 Go MCP SDK — Pull requests
 
 Two pull requests on the [official Go SDK](https://github.com/modelcontextprotocol/go-sdk) for the Model Context Protocol, maintained with Google.
 
@@ -19,15 +19,15 @@ Two pull requests on the [official Go SDK](https://github.com/modelcontextprotoc
 - [Tool.Execution](https://github.com/modelcontextprotocol/go-sdk/pull/1336) keeps the 2025-11-25 `taskSupport` field through a proxy that decodes and re-encodes a tool. `tools/list` sends it only on that protocol version
 - [Task type](https://github.com/modelcontextprotocol/go-sdk/pull/1335) adds the tasks extension handle so a task can round-trip (draft). The SDK still does not run a tool as a task
 
-### 🐙 GitHub MCP Server
+### 🐙 GitHub MCP Server — Pull request
 
 [`watch_workflow_run`](https://github.com/github/github-mcp-server/pull/3406) on [GitHub's official MCP server](https://github.com/github/github-mcp-server). One call waits for an Actions run, sends progress, and stops when the client cancels.
 
-### 💳 ExtPay
+### 💳 ExtPay — Pull request
 
 [Referral codes](https://github.com/Glench/ExtPay/pull/364) for [ExtPay](https://github.com/Glench/ExtPay), the payments library for browser extensions (770+ stars).
 
-### 🔑 iCloudBridge
+### 🔑 iCloudBridge — Pull request
 
 [Ente Auth verification codes](https://github.com/keithvassallomt/icloudbridge/pull/31) matched to existing Apple Passwords logins. Merged.
 
