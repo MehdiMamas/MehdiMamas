@@ -110,6 +110,18 @@ Chrome extension that highlights game versions on SuperPSX when a matching patch
 
 ## Open Source Contributions
 
+### 🐹 Go MCP SDK — Task type
+
+Added the tasks extension's Task type to the [official Go SDK](https://github.com/modelcontextprotocol/go-sdk), so a task handle can round-trip. Execution stays out: no task methods, and a tool call still does not become a task.
+
+**Go • MCP**
+
+- Task carries taskId, status, statusMessage, createdAt, lastUpdatedAt, ttlMs, and pollIntervalMs
+- A nil ttlMs is sent as JSON null, which the extension defines as unlimited
+- Task IDs are generated with crypto/rand. Nothing creates a task yet; tests are the only caller
+
+[Pull Request #1335](https://github.com/modelcontextprotocol/go-sdk/pull/1335) (draft)
+
 ### 🐙 GitHub MCP Server — Watch workflow runs
 
 Added `watch_workflow_run` to `actions_get` on [GitHub's official MCP server](https://github.com/github/github-mcp-server), so an agent waits for a workflow run in one call instead of polling.
