@@ -6,6 +6,31 @@ I build production software across **AI, backend systems, automation, security, 
 
 I am also strong at coding with AI. I use LLMs daily to plan, prompt, review, and ship, and I check the result before it lands.
 
+## Highlights
+
+Contributions to official SDKs and libraries other people already ship with.
+
+### 🐹 Go MCP SDK
+
+Two pull requests on the [official Go SDK](https://github.com/modelcontextprotocol/go-sdk) for the Model Context Protocol, maintained with Google.
+
+**Go • MCP**
+
+- [Tool.Execution](https://github.com/modelcontextprotocol/go-sdk/pull/1336) keeps the 2025-11-25 `taskSupport` field through a proxy that decodes and re-encodes a tool. `tools/list` sends it only on that protocol version
+- [Task type](https://github.com/modelcontextprotocol/go-sdk/pull/1335) adds the tasks extension handle so a task can round-trip (draft). The SDK still does not run a tool as a task
+
+### 🐙 GitHub MCP Server
+
+[`watch_workflow_run`](https://github.com/github/github-mcp-server/pull/3406) on [GitHub's official MCP server](https://github.com/github/github-mcp-server). One call waits for an Actions run, sends progress, and stops when the client cancels.
+
+### 💳 ExtPay
+
+[Referral codes](https://github.com/Glench/ExtPay/pull/364) for [ExtPay](https://github.com/Glench/ExtPay), the payments library for browser extensions (770+ stars).
+
+### 🔑 iCloudBridge
+
+[Ente Auth verification codes](https://github.com/keithvassallomt/icloudbridge/pull/31) matched to existing Apple Passwords logins. Merged.
+
 ## What I Build
 
 - 🤖 **AI Systems** — LLM integrations, conversational AI, voice agents, workflow automation
@@ -109,6 +134,19 @@ Chrome extension that highlights game versions on SuperPSX when a matching patch
 [View Project](https://github.com/MehdiMamas/superpsx-patch-checker)
 
 ## Open Source Contributions
+
+### 🐹 Go MCP SDK — Tool execution field
+
+Added `Tool.Execution` to the [official Go SDK](https://github.com/modelcontextprotocol/go-sdk) so the 2025-11-25 `taskSupport` field survives a proxy that decodes and re-encodes a tool.
+
+**Go • MCP**
+
+- `tools/list` includes `execution` only for protocol version 2025-11-25. A newer list, an older list, and a list with no negotiated version omit it
+- `json.Marshal` of a tool still includes the field, so a proxy round-trip keeps it
+- The registered tool is copied, not mutated, so one server can show the field to a 2025-11-25 session and hide it from a 2026-07-28 session
+- Setting the field does not run the tool as a task
+
+[Pull Request #1336](https://github.com/modelcontextprotocol/go-sdk/pull/1336) (open)
 
 ### 🐹 Go MCP SDK — Task type
 
