@@ -10,6 +10,19 @@ I am also strong at coding with AI. I use LLMs daily to plan, prompt, review, an
 
 Pull requests on official SDKs and libraries other people already ship with. Projects I built are listed under Featured Projects.
 
+### Proton Drive CLI Sync — Pull requests
+
+Six pull requests on [proton-drive-cli-sync](https://github.com/lafontaj/proton-drive-cli-sync), two-way Proton Drive sync for Linux.
+
+**Python • pytest • systemd**
+
+- [Test harness](https://github.com/lafontaj/proton-drive-cli-sync/pull/4) stands in for the `proton-drive` CLI so the suite runs without a Proton account. Merged
+- [Exit 5](https://github.com/lafontaj/proton-drive-cli-sync/pull/8) when a finished pass still failed an upload, a listing, a trash, or a stall-skip (open)
+- [Excluded names](https://github.com/lafontaj/proton-drive-cli-sync/pull/9) already on Drive stay unless the mapping says prune (open)
+- [Settings and the CLI](https://github.com/lafontaj/proton-drive-cli-sync/pull/10) are looked up under `~/.config` and on `PATH` (open)
+- [Mount re-check](https://github.com/lafontaj/proton-drive-cli-sync/pull/11) before each folder's deletions (open)
+- [Mass-deletion guard](https://github.com/lafontaj/proton-drive-cli-sync/pull/12) stays off unless it is turned on (open)
+
 ### 🐹 Go MCP SDK — Pull requests
 
 Two pull requests on the [official Go SDK](https://github.com/modelcontextprotocol/go-sdk) for the Model Context Protocol, maintained with Google.
@@ -40,6 +53,18 @@ Two pull requests on the [official Go SDK](https://github.com/modelcontextprotoc
 - 📱 **Cross-Platform Software** — Web, Electron, React Native, iOS, Android
 
 ## Featured Projects
+
+### 🪟 HideMyWindows
+
+Windows app that hides chosen windows from screenshots, recordings, and capture tools. Community continuation of the original by [Cristian Gambino (@zCri)](https://github.com/zCri): same name and purpose, rebuilt from scratch.
+
+**Rust • Tauri 2 • Svelte**
+
+- Hides windows with `SetWindowDisplayAffinity`, matched by process, title, class, or PID, including regex
+- Window rules re-apply as new windows appear. Quick launch starts an app already hidden
+- Tray, optional start with Windows, and installers for x64, x86, and arm64. The app itself stays visible to capture unless that option is turned on
+
+[View Project](https://github.com/MehdiMamas/HideMyWindows) · [Release v2.0.1](https://github.com/MehdiMamas/HideMyWindows/releases/tag/v2.0.1)
 
 ### 🌉 PassBridge
 
@@ -133,7 +158,30 @@ Chrome extension that highlights game versions on SuperPSX when a matching patch
 
 [View Project](https://github.com/MehdiMamas/superpsx-patch-checker)
 
+### Bitwarden → Apple Keychain
+
+Python script that turns a Bitwarden CSV export into a Chrome import. Safari then imports those passwords into iCloud Keychain. Logins with more than one website are written to a side list so the extra URLs can be added by hand.
+
+**Python**
+
+[View Project](https://github.com/MehdiMamas/bitwarden-to-apple-keychain-converter-script)
+
 ## Open Source Contributions
+
+### Proton Drive CLI Sync — Test harness and safer sync
+
+Contributions to [proton-drive-cli-sync](https://github.com/lafontaj/proton-drive-cli-sync). The harness is merged. The safety and path changes are open.
+
+**Python • pytest • systemd**
+
+- A fake `proton-drive` and a pytest suite run with `bash scripts/test.sh` and no Proton account. `PROTON_SYNC_SETTINGS` keeps the suite off the repository settings file
+- A finished pass that still failed exits 5. The real-time consumer keeps its markers and waits before retrying that target
+- An excluded name already on Drive is trashed by default. A mapping can set `excluded_remote` to `keep`
+- Settings move to `~/.config/proton-drive-sync/settings.json`. The CLI is resolved from `PROTON_DRIVE_CLI`, a settings path, a binary next to the scripts, then `PATH`
+- Before each folder's deletions the mount is checked again. A refusal stops later deletions in that mapping, and uploads continue
+- The mass-deletion guard is off unless configuration turns it on. Thresholds default to 20 items and half the folder
+
+[Pull Request #4](https://github.com/lafontaj/proton-drive-cli-sync/pull/4) (merged) · [#8](https://github.com/lafontaj/proton-drive-cli-sync/pull/8) · [#9](https://github.com/lafontaj/proton-drive-cli-sync/pull/9) · [#10](https://github.com/lafontaj/proton-drive-cli-sync/pull/10) · [#11](https://github.com/lafontaj/proton-drive-cli-sync/pull/11) · [#12](https://github.com/lafontaj/proton-drive-cli-sync/pull/12) (open)
 
 ### 🐹 Go MCP SDK — Tool execution field
 
@@ -219,6 +267,18 @@ Combined input and output devices in one menu for [SoundSwitcher](https://github
 - The playback helper can set the Default role, the Communications role, or both
 
 [Pull Request #102](https://github.com/creepyLANguy/SoundSwitcher/pull/102) (open)
+
+### Mira Photo — Chat, marketplace, and auth
+
+Merged pull requests on the Mira Photo [frontend](https://github.com/miraphoto/miraphoto-frontend) and [backend](https://github.com/miraphoto/miraphoto-backend).
+
+**TypeScript • Expo • Node.js**
+
+- A centralized chat engine, one thread per model post, and a real-time seen indicator
+- Thumbnails, photographer pagination, and fewer round trips on home and marketplace
+- Clerk logout in one place, socket auth refresh on reconnect, and optional auth on public user lookups
+
+[Chat engine](https://github.com/miraphoto/miraphoto-frontend/pull/54) · [Seen indicator](https://github.com/miraphoto/miraphoto-frontend/pull/51) · [Home prefetch](https://github.com/miraphoto/miraphoto-frontend/pull/53) · [Socket auth](https://github.com/miraphoto/miraphoto-frontend/pull/60)
 
 ## Experience
 
