@@ -306,4 +306,4 @@ Software engineering experience spanning:
 
 ## Connect
 
-[LinkedIn](https://linkedin.com/in/mehdidev/) · [GitHub](https://github.com/MehdiMamas) · [Website](https://mehdimamas.dev)
+[LinkedIn](https://linkedin.com/in/mehdimamas/) · [GitHub](https://github.com/MehdiMamas) · [Website](https://mehdimamas.dev)
