@@ -12,15 +12,16 @@ Pull requests on official SDKs and libraries other people already ship with. Pro
 
 ### Proton Drive CLI Sync — Pull requests
 
-Six pull requests on [proton-drive-cli-sync](https://github.com/lafontaj/proton-drive-cli-sync), two-way Proton Drive sync for Linux.
+Seven pull requests on [proton-drive-cli-sync](https://github.com/lafontaj/proton-drive-cli-sync), Proton Drive sync for Linux. Three are merged.
 
 **Python • pytest • systemd**
 
+- [Two-way sync](https://github.com/lafontaj/proton-drive-cli-sync/pull/16), opt-in per folder mapping, with conflict copies, a SQLite state database, a Qt window, and file-manager status (open)
 - [Test harness](https://github.com/lafontaj/proton-drive-cli-sync/pull/4) stands in for the `proton-drive` CLI so the suite runs without a Proton account. Merged
-- [Exit 5](https://github.com/lafontaj/proton-drive-cli-sync/pull/8) when a finished pass still failed an upload, a listing, a trash, or a stall-skip (open)
+- [Exit 5](https://github.com/lafontaj/proton-drive-cli-sync/pull/8) when a finished pass still failed an upload, a listing, a trash, or a stall-skip. Merged
 - [Excluded names](https://github.com/lafontaj/proton-drive-cli-sync/pull/9) already on Drive stay unless the mapping says prune (open)
 - [Settings and the CLI](https://github.com/lafontaj/proton-drive-cli-sync/pull/10) are looked up under `~/.config` and on `PATH` (open)
-- [Mount re-check](https://github.com/lafontaj/proton-drive-cli-sync/pull/11) before each folder's deletions (open)
+- [Mount re-check](https://github.com/lafontaj/proton-drive-cli-sync/pull/11) before each folder's deletions. Merged
 - [Mass-deletion guard](https://github.com/lafontaj/proton-drive-cli-sync/pull/12) stays off unless it is turned on (open)
 
 ### 🐹 Go MCP SDK — Pull requests
@@ -61,10 +62,24 @@ Windows app that hides chosen windows from screenshots, recordings, and capture 
 **Rust • Tauri 2 • Svelte**
 
 - Hides windows with `SetWindowDisplayAffinity`, matched by process, title, class, or PID, including regex
+- Apps opened the normal way are checked before their windows show, so a matching window is hidden before it is ever on screen. The protection can be paused for 15 to 120 minutes
+- A red dot on a hidden window's title bar shows it is protected. The dot stays out of captures
 - Window rules re-apply as new windows appear. Quick launch starts an app already hidden
-- Tray, optional start with Windows, and installers for x64, x86, and arm64. The app itself stays visible to capture unless that option is turned on
+- Tray, optional start with Windows, and installers for x64, x86, and arm64, each built and checked in CI before a release is published
 
-[View Project](https://github.com/MehdiMamas/HideMyWindows) · [Release v2.0.1](https://github.com/MehdiMamas/HideMyWindows/releases/tag/v2.0.1)
+[View Project](https://github.com/MehdiMamas/HideMyWindows) · [Release v2.2.1](https://github.com/MehdiMamas/HideMyWindows/releases/tag/v2.2.1)
+
+### 🖱️ Cursor Stream Switcher
+
+Discord screen share that follows the mouse. The app adds a virtual monitor and keeps drawing whichever real monitor the cursor is on onto it, so one shared screen always shows where you are working.
+
+**Rust • Windows • Tray app**
+
+- Switches after 150 ms on a new monitor. Works with any layout, mixed resolutions and scaling, rotated and HDR screens, and monitors on different GPUs
+- Hotkeys to pause the stream or lock it to one monitor, and a private card for monitors that should never be shown
+- A 2.5 MB installer, about 0.3% GPU in normal use, no accounts or telemetry, and signed in-place updates
+
+[View Project](https://github.com/MehdiMamas/discord-cursor-stream-switcher) · [Release v0.2.2](https://github.com/MehdiMamas/discord-cursor-stream-switcher/releases/tag/v0.2.2)
 
 ### 🌉 PassBridge
 
@@ -76,11 +91,12 @@ iCloud Passwords in Chrome on macOS and Windows, with an inline menu, a fill sho
 - Ctrl/Cmd+Shift+L fills and cycles matching logins
 - Saving a password hands the write to Apple's own save sheet
 - Looks up a password on the page host and on related websites stored with that login
+- SRP tested against the RFC 5054 vectors, with typecheck, build, and tests in CI before each release
 - Loaded unpacked. Apple's helper only accepts its extension id, so there is no Chrome Web Store listing
 
-[View Project](https://github.com/MehdiMamas/open-passwords) · [Release](https://github.com/MehdiMamas/open-passwords/releases/tag/v1.0.1)
+[View Project](https://github.com/MehdiMamas/passbridge) · [Release](https://github.com/MehdiMamas/passbridge/releases/tag/v1.0.1)
 
-Fork of [ManiForoughi2/open-passwords](https://github.com/ManiForoughi2/open-passwords) (Apache-2.0). Apple protocol from [au2001/icloud-passwords-firefox](https://github.com/au2001/icloud-passwords-firefox) (Apache-2.0). Field lists from [bitwarden/clients](https://github.com/bitwarden/clients) (GPL-3.0). Not affiliated with Apple or Bitwarden.
+Based on [ManiForoughi2/open-passwords](https://github.com/ManiForoughi2/open-passwords) (Apache-2.0). Apple protocol from [au2001/icloud-passwords-firefox](https://github.com/au2001/icloud-passwords-firefox) (Apache-2.0). Field lists from [bitwarden/clients](https://github.com/bitwarden/clients) (GPL-3.0). Not affiliated with Apple or Bitwarden.
 
 ### 🧠 AI Voice Medication Agent
 
@@ -104,9 +120,9 @@ End-to-end encrypted sharing between two devices on the same Wi-Fi. One Flutter 
 
 - Each session uses a new X25519 key. The message key is derived with HKDF-SHA256 and the text is encrypted with XChaCha20-Poly1305
 - Keys and messages are wiped when the session ends. Nothing is written to disk
-- Windows, macOS, Linux, Android, and iOS
+- Windows, macOS, Linux, Android, and iOS. Windows installers are signed through SignPath, the macOS build is notarized, and the desktop apps update themselves
 
-[View Project](https://github.com/MehdiMamas/ShareGo) · [Release v2.0.0](https://github.com/MehdiMamas/ShareGo/releases/tag/v2.0.0)
+[View Project](https://github.com/MehdiMamas/ShareGo) · [Release v2.0.2](https://github.com/MehdiMamas/ShareGo/releases/tag/v2.0.2)
 
 ### 📬 Keytray
 
@@ -115,7 +131,7 @@ Chrome, Edge, and Brave extension that reads verification codes and sign-in link
 **TypeScript • React • Chrome Extension • Gmail API • OAuth**
 
 - One Gmail account is free. More accounts are a one-time purchase
-- Background checks that speed up while a code field is on screen
+- Background checks that speed up while a code field is on screen. Accounts stay connected on Google refresh tokens
 - Auto-fill for a single box or split digit boxes, plus a Fill chip for recent codes
 - Open link for a verification or sign-in URL, only after you click
 
@@ -168,9 +184,9 @@ Python script that turns a Bitwarden CSV export into a Chrome import. Safari the
 
 ## Open Source Contributions
 
-### Proton Drive CLI Sync — Test harness and safer sync
+### Proton Drive CLI Sync — Two-way sync, test harness, and safer deletes
 
-Contributions to [proton-drive-cli-sync](https://github.com/lafontaj/proton-drive-cli-sync). The harness is merged. The safety and path changes are open.
+Contributions to [proton-drive-cli-sync](https://github.com/lafontaj/proton-drive-cli-sync). The harness, the exit code, and the mount re-check are merged. The rest are open.
 
 **Python • pytest • systemd**
 
@@ -180,8 +196,9 @@ Contributions to [proton-drive-cli-sync](https://github.com/lafontaj/proton-driv
 - Settings move to `~/.config/proton-drive-sync/settings.json`. The CLI is resolved from `PROTON_DRIVE_CLI`, a settings path, a binary next to the scripts, then `PATH`
 - Before each folder's deletions the mount is checked again. A refusal stops later deletions in that mapping, and uploads continue
 - The mass-deletion guard is off unless configuration turns it on. Thresholds default to 20 items and half the folder
+- Two-way sync for a mapping that asks for it. Downloads go to a temporary file first, a file changed on both sides keeps your copy and saves Proton's as a conflict copy, and nothing is deleted outright. Adds an optional Qt window, file-manager status for Nautilus and Dolphin, a read-only `doctor.py` report, and an Arch package. 262 tests pass on Linux
 
-[Pull Request #4](https://github.com/lafontaj/proton-drive-cli-sync/pull/4) (merged) · [#8](https://github.com/lafontaj/proton-drive-cli-sync/pull/8) · [#9](https://github.com/lafontaj/proton-drive-cli-sync/pull/9) · [#10](https://github.com/lafontaj/proton-drive-cli-sync/pull/10) · [#11](https://github.com/lafontaj/proton-drive-cli-sync/pull/11) · [#12](https://github.com/lafontaj/proton-drive-cli-sync/pull/12) (open)
+[Pull Request #4](https://github.com/lafontaj/proton-drive-cli-sync/pull/4) · [#8](https://github.com/lafontaj/proton-drive-cli-sync/pull/8) · [#11](https://github.com/lafontaj/proton-drive-cli-sync/pull/11) (merged) · [#9](https://github.com/lafontaj/proton-drive-cli-sync/pull/9) · [#10](https://github.com/lafontaj/proton-drive-cli-sync/pull/10) · [#12](https://github.com/lafontaj/proton-drive-cli-sync/pull/12) · [#16](https://github.com/lafontaj/proton-drive-cli-sync/pull/16) (open)
 
 ### 🐹 Go MCP SDK — Tool execution field
 
