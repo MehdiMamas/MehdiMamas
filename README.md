@@ -166,6 +166,52 @@ Python script that turns a Bitwarden CSV export into a Chrome import. Safari the
 
 [View Project](https://github.com/MehdiMamas/bitwarden-to-apple-keychain-converter-script)
 
+### 🏃 gh-runners
+
+Self-hosted GitHub Actions runners on your own Mac, Linux and Windows machines, set up from a dashboard in your browser or from the terminal.
+
+**Go • GitHub Actions • CLI**
+
+- Click **Add runner** next to a repository and it downloads, registers and starts a runner on this computer
+- Every action is also a command, and it works as a GitHub CLI extension (`gh runners`)
+- One static binary for macOS, Linux and Windows
+
+[View Project](https://github.com/MehdiMamas/gh-runners)
+
+### 🗺️ Disk Map
+
+Disk usage treemap for macOS and Windows: see where your disk space went, with known space hogs tagged, and reveal or trash what is big.
+
+**Rust • Tauri • TypeScript**
+
+- Fast treemap and sorted list of any folder, home by default
+- Update check is the only network request. Scans stay on your machine
+- Signed and notarized on macOS
+
+[View Project](https://github.com/MehdiMamas/disk-map)
+
+### 🔄 claude-sync
+
+Tray app that shares a Claude Code setup (settings, `CLAUDE.md`, skills, subagents, slash commands, plugins) with a group of friends through one private GitHub repo.
+
+**Rust • Tauri**
+
+- A change reaches everyone's machines within about a minute, and local edits ask before they are shared
+- Windows and macOS desktop app, Linux in beta, plus a headless `claude-sync-cli` for servers and WSL
+
+[View Project](https://github.com/MehdiMamas/claude-sync)
+
+### 🔍 rebuild-review
+
+Claude Code plugin that rebuilds a project from what it does and how it looks, then scores the rebuild against the original.
+
+**JavaScript • Playwright • axe-core • Electron**
+
+- Works on web, Electron, CLI and backend targets, and never changes the target
+- Produces a report with a verdict, confidence and scores
+
+[View Project](https://github.com/MehdiMamas/rebuild-review)
+
 ## Open Source Contributions
 
 ### Proton Drive CLI Sync — Test harness and safer sync
